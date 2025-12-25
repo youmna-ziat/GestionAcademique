@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="15"
+      xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="ma.tp.gestionacademique.controller.DossierAdministratifReadController"
+      style="-fx-background-color: #f9f9f9;">
+
+    <Label text="Dossiers Administratifs existants"
+           style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+
+    <TableView fx:id="dossierTable" prefHeight="300">
+        <columns>
+            <TableColumn fx:id="numeroColumn" text="Numéro d'inscription" prefWidth="150"/>
+            <TableColumn fx:id="dateColumn" text="Date de création" prefWidth="150"/>
+            <TableColumn fx:id="eleveColumn" text="Élève" prefWidth="200"/>
+        </columns>
+    </TableView>
+
+    <HBox alignment="CENTER_RIGHT">
+        <Button text="Fermer" onAction="#handleClose"/>
+    </HBox>
+</VBox>
+

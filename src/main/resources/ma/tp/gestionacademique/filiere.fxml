@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="ma.tp.gestionacademique.controller.FiliereController" >
+
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+
+    <!-- Formulaire -->
+    <GridPane hgap="10" vgap="10">
+        <Label text="Code:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="codeField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+        <Label text="Nom:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <TextField fx:id="nomField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <Label text="Description:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <TextField fx:id="descriptionField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+        <Label text="Cours disponibles" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <ListView fx:id="coursListView"
+                  GridPane.rowIndex="3"
+                  GridPane.columnIndex="1"
+                  prefHeight="120"/>
+
+        <Label text="(Ctrl + clic pour sélectionner plusieurs cours)"
+               GridPane.rowIndex="4"
+               GridPane.columnIndex="1"
+               style="-fx-font-size: 11px; -fx-text-fill: gray;"/>
+
+
+    </GridPane>
+
+
+    <!-- Boutons -->
+    <HBox spacing="10">
+        <Button text="Ajouter" onAction="#handleAdd"/>
+        <Button text="Modifier" onAction="#handleUpdate"/>
+        <Button text="Supprimer" onAction="#handleDelete"/>
+        <Button text="Actualiser" onAction="#loadFilieres"/>
+        <Button text="← Retour au Dashboard"
+                onAction="#goBack"/>
+
+    </HBox>
+
+    <!-- TableView -->
+    <TableView fx:id="filiereTable"
+               VBox.vgrow="ALWAYS"
+               prefWidth="700">
+
+    <columns>
+            <TableColumn fx:id="colId" text="ID" prefWidth="50"/>
+            <TableColumn fx:id="colCode" text="Code" prefWidth="100"/>
+            <TableColumn fx:id="colNom" text="Nom" prefWidth="150"/>
+            <TableColumn fx:id="colDescription" text="Description" prefWidth="200"/>
+            <TableColumn fx:id="colCours" text="Cours" prefWidth="200"/>
+        </columns>
+    </TableView>
+
+
+</VBox>

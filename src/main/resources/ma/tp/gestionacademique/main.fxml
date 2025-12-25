@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane xmlns="http://javafx.com/javafx/17"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="ma.tp.gestionacademique.controller.MainController"
+           styleClass="dashboard-root"
+           style="-fx-background-color: linear-gradient(to bottom right, #F5F5DC, #E0C097);">
+
+    <VBox spacing="25"
+          alignment="CENTER"
+          style="-fx-background-color: rgba(255,255,255,0.5);
+                 -fx-padding: 40;
+                 -fx-background-radius: 20;
+                 -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10,0,0,5);">
+
+        <Button text="👩‍🎓 Gestion des Élèves" onAction="#goToEleve"
+                style="-fx-background-color: #D8C3A5;
+                       -fx-text-fill: #3E2723;
+                       -fx-font-size: 16px;
+                       -fx-padding: 10 30 10 30;
+                       -fx-background-radius: 15;"/>
+        <Button text="📘 Gestion des Cours" onAction="#goToCours"
+                style="-fx-background-color: #D8C3A5;
+                       -fx-text-fill: #3E2723;
+                       -fx-font-size: 16px;
+                       -fx-padding: 10 30 10 30;
+                       -fx-background-radius: 15;"/>
+        <Button text="🏫 Gestion des Filières" onAction="#goToFiliere"
+                style="-fx-background-color: #D8C3A5;
+                       -fx-text-fill: #3E2723;
+                       -fx-font-size: 16px;
+                       -fx-padding: 10 30 10 30;
+                       -fx-background-radius: 15;"/>
+        <Button text="📂 Dossiers Administratifs" onAction="#goToDossier"
+                style="-fx-background-color: #D8C3A5;
+                       -fx-text-fill: #3E2723;
+                       -fx-font-size: 16px;
+                       -fx-padding: 10 30 10 30;
+                       -fx-background-radius: 15;"/>
+    </VBox>
+
+</StackPane>
+
+
+
